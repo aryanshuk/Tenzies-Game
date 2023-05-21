@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0b2434;
+    font-family: 'Karla', sans-serif;
+    overflow-x: hidden;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 20px;
+    margin: 20px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.die-container {
+    display: grid;
+    grid-template: auto auto / repeat(5, 1fr);
+    gap: 20px;
+    margin: 40px;
+    width: fit-content;
+    user-select: none;
+}
+
+.die-face {
+    grid-row: span 1;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    box-shadow: 0px 3.57447px 3.57447px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    user-select: none;
+}
+
+.roll-dice {
+    height: 50px;
+    width: 120px;
+    border: none;
+    border-radius: 6px;
+    background-color: #5035FF;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-family: "Karla", sans-serif;
+    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.18);
+}
+
+.roll-dice:active {
+    box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
+
+.roll-dice:focus {
+    outline: none;
+}
+
+.faceImg {
+    width: 50px;
+    height: 50px;
+}
+
+.won {
+    font-size: .5rem;
+    transition: width 1s;
+}
+
+.won {
+    font-size: 2.5rem;
+}
+
+.warning-message {
+    display: none;
+    flex-direction: column;
+    padding: 20px;
+    margin: 20px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+@media screen and (max-width: 824px) and (orientation:landscape) {
+    .main {
+        display: none;
+    }
+
+    .warning-message {
+        display: flex;
+    }
+}
